@@ -3,82 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>Food, LLC</title>
-    
-    <!-- Inline CSS Styles -->
+   
     <style>
-        /* Custom CSS for styling */
+    /* Custom CSS */
+/* Style for the page heading */
+.page-heading {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 
-        /* Navbar Styles */
-        .navbar {
-            background-color: #333;
-            border: none;
-        }
-
-        .navbar-brand {
-            color: #fff;
-            font-weight: bold;
-        }
-
-        .navbar-toggle .icon-bar {
-            background-color: #fff;
-        }
-
-        /* Centered Page Heading */
-        h1.text-center {
-            text-align: center;
-        }
-
-        /* Tall Section Styles */
-        .tall-section {
-            background-color: #f2f2f2;
-            padding: 20px;
-            min-height: 1000px; /* Adjust the height as needed */
-        }
-    </style>
+/* Style for the content section */
+.content-section {
+    background-color: #f7f7f7;
+    padding: 20px 0;
+}
+</style>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-default">
-        <div class="container">
+        <div class="container-fluid">
+            <!-- Mobile View Menu Button -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu">
-                    <span class="sr-only">Toggle navigation</span>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mobile-menu">
+                   
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Food, LLC</a>
+                <a class="navbar-brand visible-xs" href="#">Food, LLC</a>
             </div>
-            <div class="collapse navbar-collapse" id="navbar-menu">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="visible-xs"><a href="#">Chicken</a></li>
-                    <li class="visible-xs"><a href="#">Beef</a></li>
-                    <li class="visible-xs"><a href="#">Sushi</a></li>
+            <!-- Desktop and Tablet View Company Name -->
+            <a class="navbar-brand hidden-xs" href="#">Food, LLC</a>
+            <!-- Mobile View Dropdown Menu -->
+            <div class="collapse navbar-collapse" id="mobile-menu">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Chicken</a></li>
+                    <li><a href="#">Beef</a></li>
+                    <li><a href="#">Sushi</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Page Content -->
-    <div class="container">
-        <h1 class="text-center">Our Menu</h1>
+    <!-- Page Heading -->
+    <div class="container text-center">
+        <h1 class="page-heading">Our Menu</h1>
     </div>
 
-    <!-- Tall Section -->
-    <div class="tall-section">
+    <!-- Content Section -->
+    <div class="content-section">
         <div class="container">
             <div class="row">
+                <!-- Responsive Grid -->
                 <div class="col-xs-12">
-                    <!-- Your content goes here -->
-                    <p>This is a tall section with lots of content.</p>
+                    <!-- Add your content here -->
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                 </p>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="js/jquery.min.js"></script>
+    <!-- Include Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
