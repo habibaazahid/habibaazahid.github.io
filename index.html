@@ -39,6 +39,7 @@
         }
         .dropdown-menu li {
             text-align: center;
+            width: 100%; /* Make each menu item container take up the entire width */
         }
         .dropdown-menu li a {
             color: #fff;
@@ -70,9 +71,14 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="visible-xs"><a href="#">Chicken</a></li>
-                    <li class="visible-xs"><a href="#">Beef</a></li>
-                    <li class="visible-xs"><a href="#">Sushi</a></li>
+                    <li class="visible-xs dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Chicken</a></li>
+                            <li><a href="#">Beef</a></li>
+                            <li><a href="#">Sushi</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -87,13 +93,12 @@
         </div>
      
         <div class="tall-section"> 
-            <p> captivating palates with its succulent meat and infinite culinary possibilities. From timeless comfort classics like Fried Chicken, Chicken Parmesan, and Chicken Alfredo to its seamless adaptation to diverse global flavors such as Thai Green Curry and Tandoori Chicken, this poultry marvel transcends borders and cultures. In a health-conscious era, it morphs into lean, guilt-free options like Grilled Chicken Wraps and Quinoa-Stuffed Chicken Breasts, catering to evolving dietary preferences. The contemporary culinary landscape further pushes the envelope with imaginative dishes like Sous Vide Chicken with Truffle Foam and Korean Fried Chicken Tacos, revealing chicken's enduring adaptability. Simultaneously, concerns about sustainability and ethical sourcing lead to more responsible choices, embracing free-range and ethically raised chicken. As we glimpse the future, it's clear that chicken's versatility, affordability, and universal appeal will continue to secure its prominent spot on menus, evolving in step with culinary trends and discerning diners' desires. </p.
+            <p> captivating palates with its succulent meat and infinite culinary possibilities. From timeless comfort classics like Fried Chicken, Chicken Parmesan, and Chicken Alfredo to its seamless adaptation to diverse global flavors such as Thai Green Curry and Tandoori Chicken, this poultry marvel transcends borders and cultures. In a health-conscious era, it morphs into lean, guilt-free options like Grilled Chicken Wraps and Quinoa-Stuffed Chicken Breasts, catering to evolving dietary preferences. The contemporary culinary landscape further pushes the envelope with imaginative dishes like Sous Vide Chicken with Truffle Foam and Korean Fried Chicken Tacos, revealing chicken's enduring adaptability. Simultaneously, concerns about sustainability and ethical sourcing lead to more responsible choices, embracing free-range and ethically raised chicken. As we glimpse the future, it's clear that chicken's versatility, affordability, and universal appeal will continue to secure its prominent spot on menus, evolving in step with culinary trends and discerning diners' desires. </p>
         </div>
-        
-        
     </div>
 
-    <!-- Bootstrap JS (for dropdown menu) -->
+    <!-- Bootstrap JS (for dropdown menu) and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
