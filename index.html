@@ -3,102 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food, LLC</title>
-    <!-- Link to Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- Custom CSS -->
+    <title>Delighto Cafe</title>
     <style>
-        /* Custom CSS styles */
+        /* Reset some default styles */
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Global styles */
         body {
-            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            background-color: #D3D3D3;
         }
-        .navbar {
-            background-color: #333;
-        }
-        .navbar-brand {
+
+        header {
+            background-color: 	#5A5A5A;
             color: #fff;
-            font-weight: bold;
+            padding: 20px 0;
+            text-align: center;
         }
-        .navbar-toggle {
-            background-color: #333;
+
+        nav ul {
+            list-style: none;
         }
-        .navbar-toggle .icon-bar {
-            background-color: #fff;
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
         }
-        .menu-button {
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
             background-color: #333;
             color: #fff;
-            border: none;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
-        .menu-button:hover {
+
+        .cta-button:hover {
             background-color: #555;
         }
-        .dropdown-menu {
-            width: 100%;
-            background-color: #333;
-        }
-        .dropdown-menu li {
-            text-align: center;
-            width: 100%; /* Make each menu item container take up the entire width */
-        }
-        .dropdown-menu li a {
-            color: #fff;
-        }
-        .page-heading {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 36px;
-        }
-        .tall-section {
-            background-color: #fff;
-            min-height: 1000px;
-            margin-top: 20px;
+
+        .menu-item {
+            background-color: #FAF9F6;
+            border-radius: 5px;
             padding: 20px;
+            margin: 20px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.2em;
+        }
+
+        .contact-info {
+            background-color: #fff;
+            padding: 40px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
         }
     </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Food, LLC</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="visible-xs dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Chicken</a></li>
-                            <li><a href="#">Beef</a></li>
-                            <li><a href="#">Sushi</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <header>
+        <h1>Delighto Cafe</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Page Content -->
-    <h1 class="page-heading">Our Menu</h1>
-    <div class="tall-section">
-        <!-- Add the centered and bold "Chicken" text here -->
-        <div class="text-center">
-            <h2 style="font-weight: bold;">Chicken</h2>
+    <section id="home">
+        <div class="hero">
+            <h2>Welcome to Delighto Cafe</h2>
+            <p>Experience the finest dining in town.</p>
+            <a href="#menu" class="cta-button">View Menu</a>
         </div>
-     
-        <div class="tall-section"> 
-            <p> captivating palates with its succulent meat and infinite culinary possibilities. From timeless comfort classics like Fried Chicken, Chicken Parmesan, and Chicken Alfredo to its seamless adaptation to diverse global flavors such as Thai Green Curry and Tandoori Chicken, this poultry marvel transcends borders and cultures. In a health-conscious era, it morphs into lean, guilt-free options like Grilled Chicken Wraps and Quinoa-Stuffed Chicken Breasts, catering to evolving dietary preferences. The contemporary culinary landscape further pushes the envelope with imaginative dishes like Sous Vide Chicken with Truffle Foam and Korean Fried Chicken Tacos, revealing chicken's enduring adaptability. Simultaneously, concerns about sustainability and ethical sourcing lead to more responsible choices, embracing free-range and ethically raised chicken. As we glimpse the future, it's clear that chicken's versatility, affordability, and universal appeal will continue to secure its prominent spot on menus, evolving in step with culinary trends and discerning diners' desires. </p>
-        </div>
-    </div>
+    </section>
 
-    <!-- Bootstrap JS (for dropdown menu) and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <section id="menu">
+        <div class="menu-item">
+            <img  src="https://www.foodandwine.com/thmb/r6iPQLCsuv_TrL2YCHG9A320wjE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/201304-xl-sauce-simmered-spaghetti-al-pomodoro-2000-b60bbe3cc6ad4b029fcc75844c33b9dd.jpg" style="width:250px;height:230px; alt="Speghetti picture">
+            <h3>Chicken Speghetti</h3>
+            <p>Chicken speghetti stuffed with grilled chicken, olives, mushrooms and jalepeno</p>
+            <span class="price">$10.99</span>
+        </div>
+        
+        <div class="menu-item">
+            <img  src="https://zafarullahsweets.pk/cdn/shop/products/ChickenFajitaPizza_1024x1024_crop_center.jpg?v=1643582830" style="width:250px;height:230px; alt="Pizza img">
+            <h3>Fagita Pizza</h3>
+            <p>Fajita Pizza stuffed with grilled chicken, olives, mushrooms and jalepeno</p>
+            <span class="price">$10.99</span>
+        </div>
+        
+    </section>
+
+    <section id="contact">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Address: DHA Phase 7 </p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: infodelightocafe@gmail.com</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Delighto Cafe</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
