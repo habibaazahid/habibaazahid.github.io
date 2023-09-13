@@ -6,7 +6,24 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Computer Component Order Form</title>
     <style>
-        /* Add custom CSS styles here */
+        body {
+            background-color: #C4A484; /* Light brown background color */
+            font-family: Arial, sans-serif;
+             
+        }
+
+        .container {
+            background-color: 	#FAF9F6;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #5A5A5A; /* Darker grey heading color */
+        }
+
+      
     </style>
 </head>
 <body>
@@ -28,8 +45,8 @@
                 <input type="number" class="form-control" id="quantity" name="quantity" min="1" value="1">
             </div>
             <div class="form-group">
-                <label for="comments">Additional Comments:</label>
-                <textarea class="form-control" id="comments" name="comments" rows="4"></textarea>
+                <label for="comments"> Special Note: </label>
+                <textarea class="form-control" id="comments" name="comments" rows="3"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Submit Order</button>
         </form>
