@@ -3,158 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delighto Cafe</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Computer Component Order Form</title>
     <style>
-        /* Reset some default styles */
-        body, h1, h2, h3, p {
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Global styles */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #D3D3D3;
-        }
-
-        header {
-            background-color: 	#5A5A5A;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-        }
-
-        nav li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #fff;
-        }
-
-        section {
-            padding: 40px;
-            text-align: center;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: #555;
-        }
-
-        .menu-item {
-            background-color: #FAF9F6;
-            border-radius: 5px;
-            padding: 20px;
-            margin: 20px;
-            display: inline-block;
-            text-align: center;
-        }
-
-        .price {
-            font-weight: bold;
-            color: #333;
-            font-size: 1.2em;
-        }
-
-        .contact-info {
-            background-color: #fff;
-            padding: 40px;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-        }
+        /* Add custom CSS styles here */
     </style>
 </head>
 <body>
-    <header>
-        <h1>Delighto Cafe</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container mt-5">
+        <h1>Computer Component Order Form</h1>
+        <form id="orderForm">
+            <div class="form-group">
+                <label for="component">Select Component:</label>
+                <select class="form-control" id="component" name="component">
+                    <option value="cpu">CPU</option>
+                    <option value="gpu">GPU</option>
+                    <option value="ram">RAM</option>
+                    <option value="storage">Storage</option>
+                    <option value="motherboard">Motherboard</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" class="form-control" id="quantity" name="quantity" min="1" value="1">
+            </div>
+            <div class="form-group">
+                <label for="comments">Additional Comments:</label>
+                <textarea class="form-control" id="comments" name="comments" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Order</button>
+        </form>
+        <div id="orderResult" class="mt-3"></div>
+    </div>
 
-    <section id="home">
-        <div class="hero">
-            <h2>Welcome to Delighto Cafe</h2>
-            <p>Experience the finest dining in town.</p>
-            <a href="#menu" class="cta-button">View Menu</a>
-        </div>
-    </section>
-
-    <section id="menu">
-        <div class="menu-item">
-            <img  src="https://www.foodandwine.com/thmb/r6iPQLCsuv_TrL2YCHG9A320wjE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/201304-xl-sauce-simmered-spaghetti-al-pomodoro-2000-b60bbe3cc6ad4b029fcc75844c33b9dd.jpg" style="width:250px;height:230px; alt="Speghetti picture">
-            <h3>Chicken Speghetti</h3>
-            <p>Chicken speghetti stuffed with grilled chicken, olives, mushrooms and jalepeno</p>
-            <span class="price">$10.99</span>
-        </div>
-        
-        <div class="menu-item">
-            <img  src="https://zafarullahsweets.pk/cdn/shop/products/ChickenFajitaPizza_1024x1024_crop_center.jpg?v=1643582830" style="width:250px;height:230px; alt="Pizza img">
-            <h3>Fagita Pizza</h3>
-            <p>Fajita Pizza stuffed with grilled chicken, olives, mushrooms and jalepeno</p>
-            <span class="price">$10.99</span>
-        </div>
-        
-    </section>
-     <section id="maps">
-        <div class="menu-item">
-            <h3>Maps</h3>
-            <p>Click here to view our location on the map.</p>
-            <a href="https://www.google.com/maps/place/Delighto/@31.4077209,74.1742662,17z/data=!3m1!4b1!4m6!3m5!1s0x3918ff27d9c701b9:0xf52d02b2c5e28dc6!8m2!3d31.4077163!4d74.1768411!16s%2Fg%2F11h5mjn84l?entry=ttu" >View Map</a>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="contact-info">
-            <h2>Contact Us</h2>
-            <p>Address: DHA Phase 7 </p>
-            <p>Phone: (123) 456-7890</p>
-            <p>Email: infodelightocafe@gmail.com</p>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2023 Delighto Cafe</p>
-    </footer>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-
-                window.scrollTo({
-                    top: targetElement.offsetTop,
-                    behavior: 'smooth'
+        $(document).ready(function() {
+            $("#orderForm").submit(function(event) {
+                event.preventDefault();
+                const formData = $("#orderForm").serializeArray();
+                const orderData = {};
+                formData.forEach(function(input) {
+                    orderData[input.name] = input.value;
                 });
+
+                // You can now send this data to a server for processing
+                // For this example, we'll just display the order data
+                $("#orderResult").html("<h2>Order Summary</h2>");
+                for (const key in orderData) {
+                    $("#orderResult").append(`<p><strong>${key}:</strong> ${orderData[key]}</p>`);
+                }
             });
         });
     </script>
